@@ -8,21 +8,21 @@
 }
 .myrecordheader label h3 {
   padding: 10px 20px;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
+  /* text-shadow: 0 0 3px rgba(255, 255, 255, 0.581); */
   background: #09e;
-  color: rgb(50, 50, 50);
+  color: #fff;
   border-radius: 5px;
 }
 
 .mydate {
   display: flex;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 }
 
 .mydate h4 {
   height: 30px;
   width: 190px;
-  margin: 15px 10px;
+  /* margin: 15px 10px; */
 }
 
 .mydate input {
