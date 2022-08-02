@@ -1,0 +1,32 @@
+.myrecord {
+  position: relative;
+  margin: 20px;
+  border-radius: 10px;
+  background: #fff;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.492);
+}
+.myrecordheader label h3 {
+  padding: 10px 20px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
+  background: #09e;
+  color: rgb(50, 50, 50);
+  border-radius: 5px;
+}
+
+.mydate {
+  display: flex;
+  padding: 0 15px;
+}
+
+.mydate h4 {
+  height: 30px;
+  width: 190px;
+  margin: 15px 10px;
+}
+
+.mydate input {
+  height: 30px;
+  width: 190px;
+  margin: 15px 1px;
+}

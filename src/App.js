@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Myrecords from "./Components/Pages/Myrecords";
+import Punchin from "./Components/Pages/Punchin";
+import Attconfig from "./Components/Pages/Attconfig";
+import Viewattrecord from "./Components/Pages/Viewattrecord";
+import Nav from "./Components/Pages/Nav";
+import Punchout from "./Components/Pages/Punchout";
+// import { useState } from "react";
 
 function App() {
+  // const [punch, setpunch] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<Myrecords />} />
+          <Route path="/punchin" element={<Punchin />} />
+          <Route path="/punchout" element={<Punchout />} />
+          <Route path="/Attconfig" element={<Attconfig />} />
+          <Route path="/Viewattrecord" element={<Viewattrecord />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

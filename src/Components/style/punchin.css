@@ -1,0 +1,93 @@
+.mypunchin {
+  position: relative;
+  margin: 30px;
+  border-radius: 10px;
+  background: #fff;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px #000;
+}
+.punchincontainer {
+  position: relative;
+  margin: 20px;
+  border-radius: 10px;
+  background: #09e;
+  padding-bottom: 10px;
+}
+
+.punchincontainer .mypunchindate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.mypunchindate input {
+  height: 30px;
+  width: 190px;
+  /* margin: 15px 90px; */
+  border: none;
+  margin-left: 70px;
+}
+
+.punchintime {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.punchintime input {
+  height: 30px;
+  width: 200px;
+  margin: 15px 10px;
+  border: none;
+  margin-left: 70px;
+}
+
+.punchinnote {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+.punchinnote textarea {
+  height: 70px;
+  width: 250px;
+  margin-left: 70px;
+  border: none;
+}
+.punchinbtn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.punchinbtn button {
+  margin: 0 100px;
+  /* float: right; */
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  border: none;
+  background: #09e;
+  box-shadow: 0 2px rgb(29, 88, 28);
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-weight: 900;
+}
+.punchinbtn button:hover {
+  background: rgb(50, 183, 255);
+  color: #000;
+  font-weight: 900;
+}
+
+.mypunchinheader label h3 {
+  padding: 10px 20px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
+  background: #09e;
+  color: rgb(50, 50, 50);
+  border-radius: 5px;
+  color: #fff;
+}

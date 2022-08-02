@@ -1,0 +1,86 @@
+.configmain {
+  position: relative;
+  margin: 20px;
+  border-radius: 10px;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+.configcontainer {
+  position: relative;
+  margin: 20px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.configmain .configheader h3 {
+  padding: 10px 20px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
+  background: #09e;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+.config1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+.configmain input {
+  /* margin-left: 70px; */
+  /* position: absolute; */
+  /* left: 60%; */
+  width: 15px;
+  height: 15px;
+}
+.config2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+.configcontainer input {
+  /* margin-left: 90px; */
+  margin: 0 30px 0 90px;
+}
+.config3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+.config3 input {
+  /* margin-left: 90px; */
+
+}
+
+.configbtn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.configbtn button {
+  margin: 0 100px;
+  /* float: right; */
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  border: none;
+  background: #09e;
+  box-shadow: 0 2px rgb(29, 88, 28);
+  cursor: pointer;
+  font-weight: 900;
+  color: #fff;
+}
+.configbtn button:hover {
+  background: #2f7fff99;
+  color: rgb(21, 20, 20);
+}
