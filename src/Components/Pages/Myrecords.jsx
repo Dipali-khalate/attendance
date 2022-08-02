@@ -11,9 +11,8 @@ function Myrecords() {
             <h3>My Attendance Records</h3>
           </label>
           <div className="mydate">
-            <h4>Date:</h4>
+            <h4>Date: </h4> 
             <Calendar onChange={setDate} value={date} className="calander" />
-
           </div>
         </div>
       </div>
