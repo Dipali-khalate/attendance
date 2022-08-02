@@ -107,3 +107,13 @@
   border-radius: 5px;
   font-weight: bolder;
 }
+
+.calander{
+  background-color: #09e;
+}
+.calander button{
+  width: 40px;
+  height: 40px;
+  background-color: #61dafb;
+  border: none;
+}
