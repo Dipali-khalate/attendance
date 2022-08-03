@@ -153,7 +153,10 @@
 .calander .react-calendar__navigation{
   display: flex;
   margin: 10px 0;
-  
+}
+.calander .react-calendar__navigation button{
+  color: #fff;
+  cursor: pointer;
 }
 .calander .react-calendar__navigation button{
   width: 65px ;
@@ -176,29 +179,31 @@
   font-size: 15px;
 }
 
-.calander .react-calendar__month-view__days button:nth-child(1){
+/* .calander .react-calendar__month-view__days button:nth-child(3){
   background-color: rgb(136, 136, 136);
     color: #fff;
     box-shadow: none;
 
-}
+} */
 .calander .react-calendar__month-view__days button:nth-child(2){
-    color: #fff;
+    /* color: #fff; */
   background-color: #09e;
   transition: .1s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.308), inset 3px 3px 6px #fff;
   cursor: pointer;
 }
-.calander .react-calendar__month-view__days button:nth-child(3){
+.calander .react-calendar__month-view__days button:nth-child(1){
   background-color: rgb(184, 230, 255);
-  color: #09e;
+  /* color: #09e; */
 
 }
-
 .calander .react-calendar__month-view__days button:nth-child(2):active{
   color: #fff;
   background-color: #09e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.153), inset 2px 2px 6px rgb(108, 108, 108);
   transform: scale(0.9);
-
+  
+}
+.current{
+  color: red;
 }
