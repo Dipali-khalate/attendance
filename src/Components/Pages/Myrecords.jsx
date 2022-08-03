@@ -2,11 +2,8 @@ import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "../style/attendance.css";
 function Myrecords() {
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    console.log(date - new Date("Tue Aug 02 2022 16:42:21 GMT+0530"));
-  }, [date]);
+  const [selecteddate,setselectedDate] = useState(new Date())
+  const [currentDate,setCurrentDate] = useState(new Date())
   return (
     <>
       <div className="myrecord">
@@ -16,7 +13,8 @@ function Myrecords() {
           </label>
           <div className="mydate">
             {/* <h4>Date:</h4> */}
-            <Calendar onChange={setDate} value={date} className="calander" />
+            <Calendar onChange={setselectedDate} value={selecteddate} onClickDay={(date,event)=>alert(date.getDate()+ ' ' +(date.getMonth()+1))} tileClassName={({activeStartDate, date, view }) => date.getDate() === currentDate.getDate() && date.getMonth() ===currentDate.getMonth() ? "current":""}  className="calander" />
+
           </div>
         </div>
       </div>
