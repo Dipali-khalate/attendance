@@ -1,17 +1,42 @@
 .mypunchin {
-  position: relative;
-  margin: 30px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100%;
+  left: 0%;
+  /* margin: 30px; */
   background: #fff;
   padding-bottom: 10px;
+  animation: onmodel .6s ease-in-out forwards;
+}
+
+@keyframes  onmodel{
+  0%{
+
+  }
+  100%{
+    top: 0;
+  }
+}
+.mypunchin > div {
+  width: 600px;
+  /* height: 400px; */
+  padding:20px ;
+  border-radius: 10px;
   box-shadow: 0 0 10px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #666;
 }
 .punchincontainer {
   position: relative;
   margin: 20px;
   border-radius: 10px;
+  padding: 20px;
   background: #09e;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .punchincontainer .mypunchindate {
@@ -28,6 +53,13 @@
   border: none;
   margin-left: 70px;
   border-radius: 6px;
+  color: #fff;
+}
+
+.punchincontainer p,
+h4,
+h6 {
+  color: #fff;
 }
 
 .punchintime {
@@ -40,6 +72,7 @@
 .punchintime input {
   height: 30px;
   width: 200px;
+  color: #fff;
   margin: 15px 10px;
   border: none;
   margin-left: 70px;
@@ -90,7 +123,7 @@
   padding: 10px 20px;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
   background: #09e;
-  color: rgb(50, 50, 50);
+  /* color: rgb(208, 208, 208); */
   border-radius: 5px;
   color: #fff;
 }
