@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "../style/attendance.css";
 function Myrecords() {
-  const [date,setDate] = useState(new Date())
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    console.log(date - new Date("Tue Aug 02 2022 16:42:21 GMT+0530"));
+  }, [date]);
   return (
     <>
       <div className="myrecord">
