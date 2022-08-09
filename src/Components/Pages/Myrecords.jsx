@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
+import withGoogleMap from "react-google-maps/lib/withGoogleMap";
 import "../style/attendance.css";
 import Punchin from "./Punchin";
 import Punchout from "./Punchout";
 // import { useNavigate } from "react-router-dom";
+import { GoogleMap } from "react-google-maps";
 
 function Myrecords() {
   const [selecteddate, setselectedDate] = useState(new Date());
@@ -62,6 +64,8 @@ function Myrecords() {
                   ? "previous"
                   : "next"
               }
+              showNavigation={false}
+              showNeighboringMonth={false}
               className="calander"
             />
           </div>

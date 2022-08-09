@@ -3,38 +3,133 @@
   height: 100vh;
   position: fixed;
   top: -100%;
-  left: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* margin: 30px; */
-  background: #fff;
   padding-bottom: 10px;
   animation: onmodel .6s ease-in-out forwards;
+  overflow: hidden;
 }
 
 @keyframes  onmodel{
   0%{
-
+    
   }
   100%{
-    top: 0;
+    height: 100vh;
+    top: 50%;
   }
 }
+.mypunchin .location{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  flex-wrap: wrap;
+  margin-left: 30px;
+}
+
 .mypunchin > div {
-  width: 600px;
+  width: 1020px;
+  background: #fff;
   /* height: 400px; */
   padding:20px ;
   border-radius: 10px;
-  box-shadow: 0 0 10px #000;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #666;
+  /* border: 1px solid #666; */
 }
-.punchincontainer {
+
+.mypunchin > div.mypunchinheader{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.645);
+}
+
+.mypunchin > div.mypunchinheader .camera-auth{
+  border-radius: 10px;
+  background:  #09e;
+  text-align: center;
+  padding: 20px;
+  /* width: 200px; */
+  /* border: 2px solid red; */
   position: relative;
-  margin: 20px;
+}
+div.mypunchinheader .camera-auth .select-person{
+  margin-bottom: 10px;
+}
+div.mypunchinheader .camera-auth .select-person select{
+  text-align: center;
+  width: 100%;
+  padding: 4px 10px;
+  appearance: none;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  color: #09e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.mypunchin > div.mypunchinheader .camera-auth video, .camera {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.571);
+  /* position: absolute; */
+  /* outline: 2px solid #fff;
+  outline-offset: 5px; */
+}
+.camera{
+  position: relative;
+}
+.camera img{
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+}
+.camera .resetbtn{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 155, 238, 0.467);
+  font-size: 20px;
+  border-radius: 50%;
+  /* padding: 4px 10px; */
+  line-height: 50px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.mypunchin .bg{
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  backdrop-filter: blur(10px);
+  /* border-radius: 50%; */
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+
+}
+
+.punchincontainer {
+  /* width: 400px; */
+  /* height: 300px; */
+  box-sizing: border-box;
+  position: relative;
+  /* margin: 20px; */
   border-radius: 10px;
   padding: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.577); */
   background: #09e;
   /* padding-bottom: 10px; */
 }
@@ -52,6 +147,7 @@
   /* margin: 15px 90px; */
   border: none;
   margin-left: 70px;
+  text-align: center;
   border-radius: 6px;
   color: #fff;
 }
@@ -69,10 +165,11 @@ h6 {
   padding-left: 30px;
 }
 
-.punchintime input {
+input {
   height: 30px;
-  width: 200px;
+  /* width: 200px; */
   color: #fff;
+  text-align: center;
   margin: 15px 10px;
   border: none;
   margin-left: 70px;
@@ -85,6 +182,7 @@ h6 {
   justify-content: flex-start;
   padding-left: 30px;
 }
+
 .punchinnote textarea {
   height: 70px;
   width: 250px;
@@ -92,34 +190,44 @@ h6 {
   border: none;
   border-radius: 6px;
 }
+
 .punchinbtn {
   position: relative;
+  /* bottom: 0; */
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
 .punchinbtn button {
-  margin: 0 100px;
+  margin: 10px 40px;
   /* float: right; */
   height: 40px;
   width: 90px;
   border-radius: 5px;
   border: none;
   background: #09e;
-  box-shadow: 0 2px rgb(29, 88, 28);
+  box-shadow: 0 2px 6px rgb(0, 0, 0);
   cursor: pointer;
   transition: 0.3s;
   color: #fff;
   font-weight: 900;
 }
+
 .punchinbtn button:hover {
   background: rgb(50, 183, 255);
-  color: #000;
+  /* color: #000; */
   font-weight: 900;
 }
 
+.mypunchinheader label{
+  width: 100%;
+  box-sizing: border-box;
+}
 .mypunchinheader label h3 {
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
   padding: 10px 20px;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.581);
   background: #09e;

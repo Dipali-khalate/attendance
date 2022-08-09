@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/punchin.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import CameraAuth from "../cameraAuth/CameraAuth";
 
 function Punchout(props) {
   const navigate = useNavigate();
+  const [date, setDate] = useState(new Date());
   const [punchout, setpunchout] = useState({});
 
   const handleChange = (e) => {
@@ -24,11 +26,18 @@ function Punchout(props) {
       props.setshowModel({...props.shomodel,model:false,inout:true})
     // navigate("/Viewattrecord");
   };
+  useEffect(()=>{
+    setpunchout({
+      ...punchout,
+      outdate: `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`,
+      outtime: `${date.getHours()}:${date.getMinutes()}`,
+    });
+  },[])
 
   return (
     <>
       <div className="mypunchin">
-        <div>
+        <div className="bg"></div>
           <div className="mypunchinheader">
             <label>
               <h3>Punch Out</h3>
@@ -54,12 +63,32 @@ function Punchout(props) {
                   onChange={handleChange}
                   type="date"
                   name="outdate"
+                  value={`${date.getFullYear()}-${
+                    JSON.stringify(date.getMonth()).length === 1
+                      ? "0" + JSON.stringify(date.getMonth()+1)
+                      : JSON.stringify(date.getMonth()+1)
+                  }-${
+                    JSON.stringify(date.getDate()).length === 1
+                      ? "0" + JSON.stringify(date.getDate())
+                      : JSON.stringify(date.getDate())
+                  }`}
+                  disabled
                   id=""
                 />
               </div>
               <div className="punchintime">
                 <h4>Time:</h4>
                 <input
+                  value={`${
+                    JSON.stringify(date.getHours()).length === 1
+                      ? "0" + JSON.stringify(date.getHours())
+                      : JSON.stringify(date.getHours())
+                  }:${
+                    JSON.stringify(date.getMinutes()).length === 1
+                      ? "0" + JSON.stringify(date.getMinutes())
+                      : JSON.stringify(date.getMinutes())
+                  }`}
+                  disabled
                   onChange={handleChange}
                   type="text"
                   name="outtime"
@@ -78,11 +107,13 @@ function Punchout(props) {
                 ></textarea>
               </div>
             </div>
-          </div>
+            <CameraAuth />
           <div className="punchinbtn">
-            <button onClick={handleSubmit}>Out</button>
+            <button onClick={()=>props.setshowModel({...props.showmodel,inout:true})}>In</button>
+            <button onClick={handleSubmit} style={{background:"#008000"}}>Save</button>
           </div>
-        </div>
+          </div>
+        {/* </div> */}
       </div>
     </>
   );
